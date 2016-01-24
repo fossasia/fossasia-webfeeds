@@ -1,0 +1,98 @@
+body, html {
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', Calibri, sans-serif;
+  background-color: #AB3428;
+}
+
+h1 {
+  width: 80%;
+  text-align: center;
+  background-color: #F49E4C;
+  margin: 30px auto 20px;
+  box-sizing: border-box;
+  padding: 10px;
+  display: block;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+a {
+  color: #2D728F;
+  text-decoration: none;
+}
+
+#result {
+  width: 80%;
+  height: 500px;
+  margin: 20px auto;
+  background-color: #F5EE9E;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  overflow: auto;
+}
+
+button {
+  display: block;
+  border: none;
+  background-color: #fff;
+  position: absolute;
+  height: 150px;
+  width: 75px;
+  top: 50%;
+  margin-top: -75px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+}
+
+button#back {
+  left: 0;
+  border-radius: 0 75px 75px 0;
+  background-position: left;
+  background-image: url(../img/left.png);
+
+}
+
+button#forward {
+  right: 0;
+  border-radius: 75px 0 0 75px;
+  background-position: right;
+  background-image: url(../img/right.png);
+}
+
+.post {
+  display: none;
+  padding: 20px;
+}
+
+.post.active {
+  display: block;
+}
+
+.post > h3 {
+  font-size: 1em;
+}
+
+.links {
+  display: flex;
+  list-style-type: none;
+  justify-content: flex-start;
+  padding-left: 0;
+}
+
+.links li {
+  display: inline-block;
+  margin-right: 15px;
+  background-color: #2D728F;
+  border-radius: 3px;
+  padding: 5px 10px;
+}
+
+.links li a {
+  color: #fff;
+}
+
+.post img {
+  display: block;
+  width:30%;
+  height: 30%;
+  margin: 10px;
+}
