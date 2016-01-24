@@ -21,12 +21,14 @@ $(document).ready(function() {
           posts[index].description = posts[index].description.replace(/(src)="(?!http|\/\/)/gi, 'src="http://blog.fossasia.org');
           //do the same thing with links (i.e. for tags)
           posts[index].description = posts[index].description.replace(/(href)="(?!http|\/\/)/gi, 'href="http://blog.fossasia.org');
-
+          
+          var date = new Date(posts[index].pubDate);
           //write data to a div
           $('#result').append("<div class='post'><h2 class='title'>"+posts[index].title+"</h2> \
                               <h3 class='author'>By "+posts[index].creator+"</h3> \
+                              <span class='date'>"+date.toDateString()+"</span> \
                               <div class='content'>"+posts[index].description+"</div> \
-                              <div class='link'>See more at <a href='"+posts[index].link+"'>"+posts[index].link+"</a></div> \
+                              <div class='link'>See more at <a href='"+posts[index].link+"'>FOSSASIA</a></div> \
                               </div>");
           if(index == 0) {
             $('.post').addClass('active');
@@ -67,3 +69,5 @@ $(document).ready(function() {
   }
   
 });
+
+setInterval(function() {Feed.switchNext();}, 10000);
